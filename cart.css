@@ -191,11 +191,6 @@ a{
   color:yellow;
 } 
 
-
-
-
-
-
 .color-picker {
   cursor: default;
 }
@@ -254,5 +249,10 @@ a{
     
   }
   
-
+  .reveal-modal{
+    position: absolute;
+    margin: 0 auto;
+    top: 3%;
+   }
+  
  
