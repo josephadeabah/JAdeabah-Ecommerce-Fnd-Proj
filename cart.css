@@ -116,8 +116,6 @@ a{
 .grid-container .thirdChild {
   background-color: #f4f9f9;
   text-align: left;
-  padding: 20px 0;
-  font-size: 30px;
 }
 @media screen and (max-width: 500px){
   .grid-container .thirdChild{
