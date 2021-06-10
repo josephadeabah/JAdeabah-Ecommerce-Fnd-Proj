@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Boys' Stillwater Sherpa 1/4-Zip",
+        "description": "Final Sale - This item cannot be returned or exchanged. FREE GROUND SHIPPING on all orders over $125",
+        "stockn": "N/A, Out of stock",
+        "price": "GHS 33.99",
+        "image": { "fields": { "file": { "url": "./images/product-9.jpg" } } },
+        "productavailable":"Same Day Delivery",
+        "image1": { "fields": { "file": { "url": "./images/product-10.jpg" } } },
+        "imageAmazon": { "fields": { "file": { "url": "./images/pay-amazon.png" } } },
+        "imagePaypal": { "fields": { "file": { "url": "./images/pay-paypal.png" } } },
+        "paymentdesc":"Available on all orders over $125. EASY RETURNS & EXCHANGE We offer free returns and exchanges online or in our retail stores"
+      }
+    }
+  ]
+}

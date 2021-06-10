@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #fb3640;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+/* --------------- Navbar ---------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 221);
+  
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.nav-icon {
+  font-size: 1.4rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 30%;
+  color: var(--mainWhite);
+}
+/* --------------- End of Navbar ---------------- */
+
+
+ul{
+  margin-left: 280px;
+}
+li{
+  display: inline;
+  margin: 3px;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: #676767;
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px auto auto;
+  grid-gap: 5px;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 600px;
+}
+@media screen and (max-width: 500px){
+  .grid-container{
+    display: block;
+  }
+}
+
+.grid-container .firstChild {
+  text-align: center;
+  font-size: 30px;
+}
+@media screen and (max-width: 500px){
+  .grid-container .firstChild{
+    display: inline-block;
+    position: absolute;
+  }
+}
+.grid-container .secondChild {
+  background-color: #edeef7;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+@media screen and (max-width: 500px){
+  .grid-container .secondChild{
+    display: block;
+  }
+}
+.grid-container .thirdChild {
+  background-color: #f4f9f9;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
+@media screen and (max-width: 500px){
+  .grid-container .thirdChild{
+    display: inline;
+  }
+}
+
+/*cart page container start here*/
+
+.cart-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 600px;
+}
+
+.cart-container .cart-secondChild {
+  background-color: #edeef7;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.cart-container .cart-thirdChild {
+  background-color: #f4f9f9;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/*cart page container ends here*/
+
+
+/* .card{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr  ;
+  grid-gap:5px;
+  border: 3px solid orchid;
+}*/
+.card-img-top-left{
+  width: 55%;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid var(--mainWhite);
+}
+.card-img-top-left:first-child:hover {
+  opacity: 0.4;
+} 
+
+.card-img-top {
+    width: 55%;
+    text-align: center;
+    background-color: aqua;
+} 
+.card-img-top:hover {
+  opacity: 0.4;
+} 
+
+.bag-btn {
+  background-color:#3d84b8;
+  border: none;
+  text-transform: uppercase;
+  padding: 1.0rem 4.0rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(1%);
+  cursor: pointer;
+  color:white;
+}
+.bag-btn:hover {
+  color:yellow;
+} 
+
+
+
+
+
+
+.color-picker {
+  cursor: default;
+}
+  .cl {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+    transition: box-shadow ease-out 200ms;
+    margin-right: 5px;
+  }
+
+
+.size-picker {
+  font-size: 1.2rem;
+}
+.size-picker .sz{
+  border: 1px solid var(--mainWhite);
+  color: var(--mainBlack);
+  text-align: center;
+  background:#f2f2f2;
+  font-weight: bold;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.quantity-selector {
+  margin-top: 0.5rem;
+}
+
+ .quantity-selector input#quantity-field {
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+
+  .quantity-selector .ctrl {
+    border-radius: 50%;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px ;
+    background: #f2f2f2;
+    color: #676767;
+    font-weight: bold;
+    margin: 0 3px 3px 0;
+    text-align: center;
+    border: 2px solid transparent;
+    
+  }
+  
+
+ 
