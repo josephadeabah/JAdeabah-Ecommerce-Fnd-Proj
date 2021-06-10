@@ -179,7 +179,7 @@ a{
   background-color:#3d84b8;
   border: none;
   text-transform: uppercase;
-  padding: 1.0rem 4.0rem;
+  padding: 1.0rem 2.90rem;
   letter-spacing: var(--mainSpacing);
   font-weight: bold;
   transition: var(--mainTransition);
