@@ -2,7 +2,7 @@ var shoppingCart = (function() {
   // =============================
   // Private methods and propeties
   // =============================
-  cart = [];
+  cart = []; 
   
   // Constructor
   function Item(name, price, description, count) {
