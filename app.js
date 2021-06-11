@@ -1,42 +1,3 @@
-//variables
-const cartBtn = document.querySelector(".cart-btn");
-const closeCartBtn = document.querySelector(".close-cart");
-const clearCartBtn = document.querySelector(".clear-cart");
-const cartDOM = document.querySelector(".cart");
-const cartOverlay = document.querySelector(".cart-overlay");
-const cartItems = document.querySelector(".cart-items");
-const cartTotal = document.querySelector(".cart-total");
-const cartContent = document.querySelector(".cart-content");
-const productsDOM = document.querySelector(".products-center");
-
-
-//getting the products
-class Products {
-  async getProducts() {
-    try {
-      let result = await fetch("products.json");
-      let data = await result.json();
-      let products = data.items;
-      products = products.map(item => {
-        const { title, description, stockn, price, productavailable, paymentdesc } = item.fields;
-        const { id } = item.sys;
-        const image = item.fields.image.fields.file.url;
-        const image1 = item.fields.image1.fields.file.url;
-        const imageAmazon = item.fields.imageAmazon.fields.file.url;
-        const imagePaypal = item.fields.imagePaypal.fields.file.url;
-        return { title, description, stockn, price, id, image, productavailable, image1, imageAmazon, imagePaypal, paymentdesc };
-      });
-      return products;
-    } catch (error) {
-      console.log(err);
-    }
-  }
-}
-
-// ************************************************
-// Shopping Cart API
-// ************************************************
-
 var shoppingCart = (function() {
   // =============================
   // Private methods and propeties
@@ -44,10 +5,11 @@ var shoppingCart = (function() {
   cart = [];
   
   // Constructor
-  function Item(name, price, count) {
+  function Item(name, price, description, count) {
     this.name = name;
     this.price = price;
     this.count = count;
+    this.description = description;
   }
   
   // Save cart
@@ -68,9 +30,12 @@ var shoppingCart = (function() {
   // Public methods and propeties
   // =============================
   var obj = {};
+
+
+
   
   // Add to cart
-  obj.addItemToCart = function(name, price, count) {
+  obj.addItemToCart = function(name, price, description, count) {
     for(var item in cart) {
       if(cart[item].name === name) {
         cart[item].count ++;
@@ -78,7 +43,7 @@ var shoppingCart = (function() {
         return;
       }
     }
-    var item = new Item(name, price, count);
+    var item = new Item(name, price,description, count);
     cart.push(item);
     saveCart();
   }
@@ -179,7 +144,8 @@ $('.add-to-cart').click(function(event) {
   event.preventDefault();
   var name = $(this).data('name');
   var price = Number($(this).data('price'));
-  shoppingCart.addItemToCart(name, price, 1);
+  var description = $(this).data('description');
+  shoppingCart.addItemToCart(name, price, description, 1);
   displayCart();
 });
 
@@ -188,6 +154,8 @@ $('.clear-cart').click(function() {
   shoppingCart.clearCart();
   displayCart();
 });
+
+
 
 
 function displayCart() {
@@ -241,3 +209,6 @@ $('.show-cart').on("change", ".item-count", function(event) {
 });
 
 displayCart();
+
+
+

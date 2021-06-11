@@ -26,7 +26,9 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  background: rgb(231, 226, 221);
+  background: darkslateblue;
+  color: var(--mainWhite);
+  border-radius: 0%;
   
 }
 .navbar-center {
@@ -179,7 +181,7 @@ a{
   background-color:#3d84b8;
   border: none;
   text-transform: uppercase;
-  padding: 1.0rem 2.90rem;
+  padding: 1.0rem 4.0rem;
   letter-spacing: var(--mainSpacing);
   font-weight: bold;
   transition: var(--mainTransition);
@@ -249,10 +251,13 @@ a{
     
   }
   
-  .reveal-modal{
-    position: absolute;
-    margin: 0 auto;
-    top: 3%;
-   }
-  
- 
+ .reveal-modal{
+  position: absolute;
+  margin: 0 auto;
+  top: 3%;
+ }
+.btn-secondary{
+  background: var(--mainWhite);
+  border: 1px solid darkslateblue;
+  padding: 12px;
+}
