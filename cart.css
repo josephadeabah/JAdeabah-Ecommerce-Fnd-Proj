@@ -276,7 +276,7 @@ a{
 .styled-table thead tr {
   background-color: #f4f9f9;
   color: #333;
-  text-align: left;
+  text-align: center;
 }
 .styled-table th,
 .styled-table td {
@@ -315,7 +315,7 @@ a{
 .styled-table-right thead tr {
   background-color: #f4f9f9;
   color: #333;
-  text-align: left;
+  text-align: center;
 }
 .styled-table-right th,
 .styled-table-right td {
@@ -337,4 +337,16 @@ a{
   font-weight: bold;
   color: #f4f9f9;
   height: 205px;
+}
+.description{
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+.table-left{
+  font-size: 18px;
+  margin: auto;
+  padding: auto;
+  text-align: left;
+
 }

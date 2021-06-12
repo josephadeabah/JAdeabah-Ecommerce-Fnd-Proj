@@ -58,12 +58,15 @@
     <img class="card-img-top-left" src="images/product-10.jpg" alt="Card image cap">
   </div>
   <div class="secondChild">
-<img class="card-img-top" src="images/product-9.jpg" alt="Card image cap">
+<img class="card-img-top" id="imageId" src="images/product-9.jpg" alt="Card image cap">
   </div>
   <div class="thirdChild">
     <div class="">
-      <h4 class="">Orange</h4>
-      <p class="">Price: $0.5</p>
+      <h4 class="title">Boys' Stillwater Sherpa 1/4-Zip</h4>
+      <p class="description">Final Sale - This item cannot be returned or exchanged. <br>
+
+        FREE GROUND SHIPPING on all orders over $125</p>
+      <p class="">Price: 33.99</p>
 
 
 
@@ -108,7 +111,7 @@
       </span>
       </div>
 
-      <button type="button" data-name="Sweatshirt" data-price="0.5" class="add-to-cart success btn btn-secondary" style="background:darkslateblue; color: white; padding:15px; text-decoration: none;"><i class="fas fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Add to cart</button> <br/><br/>
+      <button type="button" data-id="imageId" data-name="Sweatshirt" data-price="33.99" data-title="Boys' Stillwater Sherpa 1/4-Zip" data-description="Final Sale - This item cannot be returned or exchanged. FREE GROUND SHIPPING on all orders over $125" class="add-to-cart success btn btn-secondary" style="background:darkslateblue; color: white; padding:15px; text-decoration: none;"onclick="op();"><i class="fas fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Add to cart</button> <br/><br/>
       <button type="button" class="btn btn-secondary">Buy Online, free <br> in-store pickup</button>
     </div>
   </div>  
@@ -129,9 +132,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            
+            <span class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </span>
+            <img id="imageId" src="../images/backgroundImageFile"  style="width: 20px;"> 
           </div>
           <div class="modal-body">
             <table class="show-cart table">
