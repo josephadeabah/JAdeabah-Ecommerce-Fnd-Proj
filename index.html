@@ -12,6 +12,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
      <script src="https://kit.fontawesome.com/551bea38f0.js"></script> 
      <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <!--font awesome-->
     <!--custom css file-->
     <link rel="stylesheet" href="cart.css">
@@ -71,45 +72,44 @@
 
 
 
-      <span class="color-picker">
-        <span class="info">Color: <span id="prod-color-text">Orange</span><br><br>
-        <span class="cl" data-text="Black" data-hex="#393e46" style="background-color: #393e46;"></span>
-        <span class="cl" data-text="Nectarine" data-hex="#ffbe76" style="background-color: rgb(255, 190, 118);"></span>
-        <span class="cl active" data-text="Purple" data-hex="#8e44ad" style="background-color: rgb(142, 68, 173);"></span>
-        </span> <br>
-      </span> 
-      <span class="info">Size: <span id="prod-color-text">select a size</span><br><br>
-      <div class="size-picker">
-        <span class="sz" data-text="2T">
-            <span data-var="text">2T</span>
-        </span>
-        <span class="sz" data-text="3T">
-            <span data-var="text">3T</span>
-        </span>
-        <span class="sz" data-text="4T">
-            <span data-var="text">4T</span>
-        </span>
-        <span class="sz" data-text="5">
-            <span data-var="text">5</span>
-        </span>
-        <span class="sz" data-text="6">
-            <span data-var="text">6</span>
-        </span>
-        <span class="sz" data-text="7">
-            <span data-var="text">7</span>
-        </span>
-        <span class="sz" data-text="S">
-            <span data-var="text">S</span>
-        </span>
-        <span class="sz active" data-text="M">
-            <span data-var="text">M</span>
-        </span>
-        <span class="sz active" data-text="L">
-        <span data-var="text">L</span>
-      </span>
-      <span class="sz active" data-text="XL">
-      <span data-var="text">XL</span>
-      </span>
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+
+          <div class="color-choose">
+            <div>
+              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+              <label for="red"><span></span></label>
+            </div>
+            <div>
+              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+              <label for="blue"><span></span></label>
+            </div>
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cable Configuration -->
+        <div class="cable-config">
+          <span>Select Color</span>
+
+          <div class="cable-choose">
+            <button>2T</button>
+            <button>3T</button>
+            <button>4T</button>
+            <button>M</button>
+            <button>XL</button>
+          </div>
+
+          <a href="#">Find Out More about this product</a>
+        </div>
       </div>
 
       <button type="button" data-id="imageId" data-name="Sweatshirt" data-price="33.99" data-title="Boys' Stillwater Sherpa 1/4-Zip" data-description="Final Sale - This item cannot be returned or exchanged. FREE GROUND SHIPPING on all orders over $125" class="add-to-cart success btn btn-secondary" style="background:darkslateblue; color: white; padding:15px; text-decoration: none;"onclick="op();"><i class="fas fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Add to cart</button> <br/><br/>
