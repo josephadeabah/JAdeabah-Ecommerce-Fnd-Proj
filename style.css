@@ -28,9 +28,9 @@ body{
   }
   
   .blue:hover{
-    background:#3498DB;
+    background:darkslateblue;
     color:#FFF;
-    border:3px solid #3498DB;
+    border:3px solid darkslateblue;
     -webkit-transition:0.4s;
     -moz-transition:0.4s;
     -o-transition:0.4s;
