@@ -454,6 +454,8 @@ a{
 .cable-choose button:focus {
   border: 2px solid #86939E;
   outline: none;
+  background-color: darkslateblue;
+  color: white;
 }
 
 .cable-config {
