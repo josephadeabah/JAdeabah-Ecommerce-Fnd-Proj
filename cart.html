@@ -1,84 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
-     <script src="https://kit.fontawesome.com/551bea38f0.js"></script>
-    <link rel="stylesheet" href="cart.css">
-    <title>Document</title>
+  <title>MyCart</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/551bea38f0.js"></script> 
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:Condensed" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="cart.css">
+  <!-- <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="jquery.js"></script> -->
+
 </head>
-
 <body>
-    <!--Start of Nav bar-->
-    <nav class="navbar">
-        <div class="navbar-center">
-          <span class="nav-icon">
-            <i class="fas fa-bars"></i>
-          </span>
-        <h3> Foundation Ecommerce Project</h3>
-          <div class="cart-btn">
-            <span class="nav-icon">
-             
-            </span>
-          </div>
-        </div>
-      </nav>
-      <!--End of Nav bar-->
-       <!--Start of products-->
-    <section class="product">
-        <div class="section-title">
-          <h2>My Bag:(<span class="total-count"></span>) Items &nbsp;&nbsp;&nbsp;&nbsp; <button class="clear-cart btn btn-danger">Clear all items from Cart</button></h2>
-          <ul>
-            <li><a href="index.html" title="Go home">Home</a><strong>&nbsp; &#62;</strong></li>
-            <li><a href="https://www.vineyardvines.com/men-jackets-vests/" title="Go to Jackets &amp; Vests">Jackets</a><strong>&nbsp; &#62;</strong></li>
-            <li><a href="https://www.vineyardvines.com/men/" title="Go to Men">Men</a></li>
-          </ul>
-        </div>
-      </section> <br>
-      <!--End of products-->
 
-      <!-- Main -->
-
-<div class="cart-container">
-   
-    <div class="cart-secondChild">
-      <table class="table-left show-cart" border="1">
+   <!--Start of Nav bar-->
+   <nav class="navbar">
+    <div class="navbar-center">
+      <span class="nav-icon">
+        <i class="fas fa-bars"></i>
+      </span>
+    <h3> Foundation Ecommerce Project</h3>
+      <div class="cart-btn">
         
-    </table>
-  
+      </div>
     </div>
-    
-    <div class="cart-thirdChild">
-      <table class="styled-table-right">
+  </nav>
+  <!--End of Nav bar-->
+  <div id="bagHead"> My Bag: &nbsp;<span class="total-count"></span>&nbsp;Item(s)</div>
+
+  <!--Start of products-->
+  <section class="product">
+    <div class="section-title">
+      <ul>
+        <li><a href="index.html" title="Go Home">Home</a><strong>&nbsp; &#62;</strong></li>
+        <li><a href="https://www.vineyardvines.com/men-jackets-vests/" title="Go to Jackets &amp; Vests">Jackets</a><strong>&nbsp; &#62;</strong></li>
+        <li><a href="https://www.vineyardvines.com/men/" title="Go to Men">Men</a></li>
+      </ul>
+    </div>
+  </section>
+  <!--End of products-->
+
+
+
+
+
+<div id="container">
+
+  <!-- Products -->
+  <div class="card">
+  <!-- Card Header -->
+  <div class="card-header">Products</div>
+    <!-- Card Block -->
+    <div class="card-block">
+      <table class="table show-cart table-bordered">
         <thead>
-            <tr>
-                <th>Order Summary</th>
-            </tr>
+         
         </thead>
         <tbody>
-            <tr>
-              
-            </tr>
-            <tr class="active-row">
-              Total price: $<span class="total-cart"></span>
-            </tr>
-            <!-- and so on... -->
+          
+          <!-- Product_1 -->
+          <tr>
+
+            
+
+          </tr>
+
+          <!-- Product_2 -->
+         
+
+          <!-- Product_3 -->
+          <tr>
+
+
+          </tr>
+
         </tbody>
-        
-    </table>
+      </table>
       
     </div>
+  </div>
 
-</div>
-    <script src="app.js"></script>
-    
+  <!-- Cart -->
+    <div class="card" style="min-height: 19.6rem; min-width: 30rem; float: left; margin-left: 5em; margin-right: 5.5em; margin-top: 8em;">
+    <!-- Card Header -->
+    <div class="card-header">Coupons</div>
+    <!-- Card Block -->
+    <div class="card-block" id="cart">
+      <!-- List Group -->
+      <ul class="list-group list-group-flush" id="cartItems">
+        <div class="card-header">
+          You have <span class="noOfProducts" id="noOfProducts"></span> product(s) in your cart!
+        </div>
+        <table class="table table-bordered">
+
+          <thead id="cartItemsHead"></thead>
+          <tbody id="cartItemsBody"></tbody>
+
+        </table>
+      </ul>
+    </div>
+      <div class="card-header">
+      <p>  <span>Total price: $<span class="total-cart"></span></span></p>
+      <button name="checkout" class="blue" style="float: right;">Checkout</button>
+      </div>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+
 </body>
 </html>
-
